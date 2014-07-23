@@ -11,6 +11,16 @@
         <item>6. Convocatorias</item>
         <item>7. Concursos</item>
     </string-array>
+    <string-array name="definicion">
+        <item>Emprender</item>
+        <item>Tipos</item>
+        <item>Emprendimiento</item>
+        <item>Tipos emprendimiento</item>
+        <item>Creatividad</item>
+        <item>Innovacion</item>
+        <item>Transformacion</item>
+    </string-array>
+    
     
 	
 	
