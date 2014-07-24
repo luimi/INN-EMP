@@ -53,7 +53,7 @@ public class MainActivity extends Activity {
     	Fragment frag = null;
         switch (position) {
         case 0:
-        	frag = new Conceptos();
+        	frag = new Conceptos(this);
             break;
         default:
         	Toast.makeText(getApplicationContext(),"no disponible! "+position, Toast.LENGTH_LONG).show();

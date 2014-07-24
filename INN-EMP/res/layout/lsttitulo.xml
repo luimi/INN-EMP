@@ -4,9 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <ExpandableListView
-                android:id="@+id/lista"
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"/>  
+    <TextView
+        android:id="@+id/Titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Titulo"
+        android:textSize="20sp" />
 
 </LinearLayout>
