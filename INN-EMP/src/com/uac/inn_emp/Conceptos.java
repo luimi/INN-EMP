@@ -32,8 +32,13 @@ public class Conceptos extends Fragment{
         HashMap<String, List<String>> definiciones = new HashMap<String, List<String>>();
         
         List<String> titulos= Lista(getResources().getStringArray(R.array.definicion));
-        definiciones.put(titulos.get(0), Lista(getResources().getStringArray(R.array.definicion)));
-        
+        definiciones.put(titulos.get(0), Lista(getResources().getStringArray(R.array.emprender)));
+        definiciones.put(titulos.get(1), Lista(getResources().getStringArray(R.array.texto)));
+        definiciones.put(titulos.get(2), Lista(getResources().getStringArray(R.array.texto)));
+        definiciones.put(titulos.get(3), Lista(getResources().getStringArray(R.array.texto)));
+        definiciones.put(titulos.get(4), Lista(getResources().getStringArray(R.array.texto)));
+        definiciones.put(titulos.get(5), Lista(getResources().getStringArray(R.array.texto)));
+        definiciones.put(titulos.get(6), Lista(getResources().getStringArray(R.array.texto)));
         ExpandableListView expListView = (ExpandableListView) getActivity().findViewById(R.id.lista);
            
         

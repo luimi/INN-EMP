@@ -20,6 +20,17 @@
         <item>Innovacion</item>
         <item>Transformacion</item>
     </string-array>
+    <string-array name="emprender">
+        <item>Emprender</item>
+        <item>Link</item>
+    </string-array>
+    <string-array name="texto">
+        <item>Aqui va el texto predefinido por el usuario, con las definiciones 
+            completamente escritas, puede extenderse tanto como desee, sin embargo
+            debe contener algunos de los caracteres unicos para resaltar textos </item>
+        <item>Link personalizado para mayor conocimiento</item>
+    </string-array>
+    
     
     
 	

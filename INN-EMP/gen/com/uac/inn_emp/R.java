@@ -10,9 +10,11 @@ package com.uac.inn_emp;
 public final class R {
     public static final class array {
         public static final int definicion=0x7f050001;
+        public static final int emprender=0x7f050002;
         /**  Listado del menu 
          */
         public static final int menu=0x7f050000;
+        public static final int texto=0x7f050003;
     }
     public static final class attr {
     }
