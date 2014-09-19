@@ -1,7 +1,6 @@
 package com.uac.inn_emp;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import android.app.Fragment;
@@ -11,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ExpandableListView;
 import android.widget.ListView;
 
 public class Conceptos extends Fragment{
@@ -23,12 +21,18 @@ public class Conceptos extends Fragment{
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-    	View rootView = inflater.inflate(R.layout.listado, container, false);
+    	View rootView = inflater.inflate(R.layout.activity_glosario, container, false);
         return rootView;
     }
     @Override 
     public void onActivityCreated(Bundle savedInstanceState) {  
         super.onActivityCreated(savedInstanceState);  
+        String[] values = getActivity().getResources().getStringArray(R.array.definicion);;
+        ListView lst = (ListView) getActivity().findViewById(R.id.ListaGlosario);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
+                android.R.layout.simple_list_item_1, values);
+        lst.setAdapter(adapter);
+        /*
         HashMap<String, List<String>> definiciones = new HashMap<String, List<String>>();
         
         List<String> titulos= Lista(getResources().getStringArray(R.array.definicion));
@@ -43,7 +47,7 @@ public class Conceptos extends Fragment{
            
         
         ExpandableListAdapter listAdapter = new ExpandableListAdapter(cont, titulos, definiciones);
-        expListView.setAdapter(listAdapter);
+        expListView.setAdapter(listAdapter);*/
     }
 
 	private List<String> Lista(String [] t) {

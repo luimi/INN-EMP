@@ -10,7 +10,9 @@ import android.app.FragmentManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -19,15 +21,15 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
-    private String[] Menu;
-
+    private ActionBarDrawerToggle mDrawerToggle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getActionBar().setIcon(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
+        getActionBar().setIcon(R.drawable.ic_drawer);
+        setTitle("");
         getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#25AEC5")));
-        Menu = getResources().getStringArray(R.array.menu);
+        
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
         
@@ -35,9 +37,28 @@ public class MainActivity extends Activity {
         LstObj.add(new MenuPrincipal("GLOSARIO","glosario"));
 		LstObj.add(new MenuPrincipal("CONVOCATORIAS","convocatorias"));
 		LstObj.add(new MenuPrincipal("TIPS","tips"));
+		
+		
 		mDrawerList.setAdapter( new MenuAdaptador(this, R.layout.menu_adaptador, LstObj ) );
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-
+        
+        getActionBar().setHomeButtonEnabled(true);
+        mDrawerToggle = new ActionBarDrawerToggle(this,mDrawerLayout,R.drawable.ic_drawer,0,0) {
+            public void onDrawerClosed(View view) {invalidateOptionsMenu();}
+            public void onDrawerOpened(View drawerView) {invalidateOptionsMenu();}
+        };
+        mDrawerLayout.setDrawerListener(mDrawerToggle);
+		
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (mDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        switch(item.getItemId()) {
+        default:
+            return super.onOptionsItemSelected(item);
+        }
     }
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
@@ -59,10 +80,8 @@ public class MainActivity extends Activity {
             fragmentManager.beginTransaction().replace(R.id.content_frame, frag).commit();
             mDrawerList.setItemChecked(position, true);
             mDrawerList.setSelection(position);
-            setTitle(Menu[position]);
             mDrawerLayout.closeDrawer(mDrawerList);
             
         }
     }
-   
 }
