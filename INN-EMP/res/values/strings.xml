@@ -1,15 +1,15 @@
 <resources>
 
-    <string name="app_name">INN-EMP</string>
+    <string name="app_name">Do it!</string>
 	<!-- Listado del menu -->
 	<string-array name="menu">
-        <item>1. Definición de conceptos</item>
-        <item>2. Metodologías plan negocios</item>
-        <item>3. Resumen Ejecutivo</item>
-        <item>4. Prototipaje</item>
-        <item>5. Pitch</item>
-        <item>6. Convocatorias</item>
-        <item>7. Concursos</item>
+        <item>GLOSARIO</item>
+        <item>Metodologías</item>
+        <item>Resumen Ejecutivo</item>
+        <item>Prototipaje</item>
+        <item>PITCH</item>
+        <item>CONVOCATORIAS</item>
+        <item>CONCURSOS</item>
     </string-array>
     <string-array name="definicion">
         <item>Emprender</item>
@@ -31,7 +31,13 @@
             completamente escritas, puede extenderse tanto como desee, sin embargo
             debe contener algunos de los caracteres unicos para resaltar textos </item>
     </string-array>
-    
+    <color name="Turquesa">#00CCCC</color>
+    <color name="Azul">#25AEC5</color>
+    <color name="Naranja">#FF6633</color>
+    <color name="NaranjaRojizo">#EA562F</color>
+    <color name="Mostaza">#FFCC33</color>
+    <color name="BeigeOscuro">#C4B7A1</color>
+    <color name="Blanco">#000000</color>
     
     
 	
