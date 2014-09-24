@@ -1,21 +1,27 @@
 package com.uac.inn_emp;
 
 
+
 import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.app.SearchManager;
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -28,7 +34,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         getActionBar().setIcon(R.drawable.ic_drawer);
         setTitle("");
-        getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#25AEC5")));
+        getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00838f")));
         
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
@@ -37,6 +43,9 @@ public class MainActivity extends Activity {
         LstObj.add(new MenuPrincipal("GLOSARIO","glosario"));
 		LstObj.add(new MenuPrincipal("CONVOCATORIAS","convocatorias"));
 		LstObj.add(new MenuPrincipal("TIPS","tips"));
+		LstObj.add(new MenuPrincipal("EMPRENDEDOR","emprendedor"));
+		LstObj.add(new MenuPrincipal("HERRAMIENTAS","herramientas"));
+		LstObj.add(new MenuPrincipal("DOCUMENTOS","documentos"));
 		
 		
 		mDrawerList.setAdapter( new MenuAdaptador(this, R.layout.menu_adaptador, LstObj ) );
@@ -84,4 +93,13 @@ public class MainActivity extends Activity {
             
         }
     }
+    @Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.activity_main_actions, menu);
+		SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+		SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+		searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+		return super.onCreateOptionsMenu(menu);
+	}
 }

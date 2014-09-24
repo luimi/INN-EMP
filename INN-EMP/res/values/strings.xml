@@ -1,17 +1,7 @@
 <resources>
 
     <string name="app_name">Do it!</string>
-	<!-- Listado del menu -->
-	<string-array name="menu">
-        <item>GLOSARIO</item>
-        <item>Metodologías</item>
-        <item>Resumen Ejecutivo</item>
-        <item>Prototipaje</item>
-        <item>PITCH</item>
-        <item>CONVOCATORIAS</item>
-        <item>CONCURSOS</item>
-    </string-array>
-    <string-array name="definicion">
+    <string-array name="glosariotitulos">
         <item>Emprender</item>
         <item>Tipos</item>
         <item>Emprendimiento</item>
@@ -20,24 +10,25 @@
         <item>Innovacion</item>
         <item>Transformacion</item>
     </string-array>
-    <string-array name="emprender">
+    <string-array name="glosariodefiniciones">
         <item>Emprendedor es un término derivado de la palabra francesa entrepreneur,
              y que es comúnmente usado para describir a un individuo que organiza y 
              opera una o varias empresas, asumiendo cierto riesgo financiero en el
               emprendimiento.</item>
-    </string-array>
-    <string-array name="texto">
-        <item>Aqui va el texto predefinido por el usuario, con las definiciones 
-            completamente escritas, puede extenderse tanto como desee, sin embargo
-            debe contener algunos de los caracteres unicos para resaltar textos </item>
+        <item>Tipos</item>
+        <item>Emprendimiento</item>
+        <item>Tipos emprendimiento</item>
+        <item>Creatividad</item>
+        <item>Innovacion</item>
+        <item>Transformacion</item>
     </string-array>
     <color name="Turquesa">#00CCCC</color>
     <color name="Azul">#25AEC5</color>
-    <color name="Naranja">#FF6633</color>
+    <color name="Naranja">#ffb300</color>
     <color name="NaranjaRojizo">#EA562F</color>
     <color name="Mostaza">#FFCC33</color>
     <color name="BeigeOscuro">#C4B7A1</color>
-    <color name="Blanco">#000000</color>
+    <color name="Blanco">#FFFFFF</color>
     
     
 	
