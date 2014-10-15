@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/Naranja"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/contacto" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal|center"
+            android:layout_marginLeft="15dp"
+            android:text="Contacto"
+            android:textColor="@color/Blanco" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/doit_title" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="7" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp" >
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/whatsapp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="8"
+                android:text="+57-301" />
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@color/Blanco"
+                android:scaleType="centerInside"
+                android:src="@drawable/twetter" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp" >
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/e_mail" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="8"
+                android:text="Correo@gmail.com" />
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@color/Blanco"
+                android:scaleType="centerInside"
+                android:src="@drawable/instagram" />
+            
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp" >
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/direccion" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="8"
+                android:text="Calle 90 Carrera 49c" />
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@color/Blanco"
+                android:scaleType="centerInside"
+                android:src="@drawable/facebook" />
+            
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
