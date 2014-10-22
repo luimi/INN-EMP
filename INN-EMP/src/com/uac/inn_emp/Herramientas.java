@@ -5,33 +5,60 @@ import java.util.List;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView.FindListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TabHost;
+import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 
-public class Conceptos extends Fragment{
+public class Herramientas extends Fragment{
 	private ListView lv;
 	private Context cont;
 	private String[] Titulos,Definiciones;
-	public Conceptos(Context c){
+	public Herramientas(Context c){
 		cont=c;
 	}
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-    	View rootView = inflater.inflate(R.layout.fragment_glosario, container, false);
+    	View rootView = inflater.inflate(R.layout.fragment_herramientas, container, false);
         return rootView;
     }
     @Override 
     public void onActivityCreated(Bundle savedInstanceState) {  
-        super.onActivityCreated(savedInstanceState);  
+        super.onActivityCreated(savedInstanceState);
+        
+        TabHost tabHost = (TabHost)getActivity().findViewById(android.R.id.tabhost);
+        TabSpec tab1 = tabHost.newTabSpec("First Tab");
+        TabSpec tab2 = tabHost.newTabSpec("Second Tab");
+        TabSpec tab3 = tabHost.newTabSpec("Third Tab");
+        Intent temp=new Intent(cont, TabContenido.class);
+        temp.putExtra("Contenido","bla1" );
+        
+        tab1.setIndicator("Tab1");
+        tab1.setContent(temp);
+
+        tab2.setIndicator("Tab2");
+        tab2.setContent(temp);
+
+        tab3.setIndicator("Tab3");
+        tab3.setContent(temp);
+        if(tab1!=null){
+        	tabHost.addTab(tab1);
+            tabHost.addTab(tab2);
+            tabHost.addTab(tab3);
+        }
+        
+        /*
         Titulos = getActivity().getResources().getStringArray(R.array.glosariotitulos);
         Definiciones = getActivity().getResources().getStringArray(R.array.glosariodefiniciones);
         ListView lst = (ListView) getActivity().findViewById(R.id.ListaGlosario);
@@ -46,22 +73,9 @@ public class Conceptos extends Fragment{
         ((TextView) getActivity().findViewById(R.id.TituloGlosario)).setTypeface(Letra());
         ((TextView) getActivity().findViewById(R.id.ContenidoGlosario)).setTypeface(Letra());
         ((TextView) getActivity().findViewById(R.id.TextoGlosario)).setTypeface(Letra());
-        
+        */
         
     }
-    private void CargarGlosario(int pos){
-    	TextView tit=(TextView) getActivity().findViewById(R.id.TituloGlosario);
-    	TextView con=(TextView) getActivity().findViewById(R.id.ContenidoGlosario);
-    	tit.setText(Titulos[pos]);
-    	con.setText(Definiciones[pos]);
-    }
-	private List<String> Lista(String [] t) {
-		List<String> te=new ArrayList<String>();
-		for (int i = 0; i < t.length; i++) {
-			te.add(t[i]);
-		}
-		return te;
-	}
 	private Typeface Letra(){
 		return Typeface.createFromAsset(getActivity().getAssets(), "Roboto-Regular.ttf");
 	}

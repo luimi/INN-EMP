@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
 		LstObj.add(new MenuPrincipal("EMPRENDEDOR","emprendedor"));
 		LstObj.add(new MenuPrincipal("HERRAMIENTAS","herramientas"));
 		LstObj.add(new MenuPrincipal("DOCUMENTOS","documentos"));
-		
+		LstObj.add(new MenuPrincipal("CONTACTO","contacto"));
 		
 		mDrawerList.setAdapter( new MenuAdaptador(this, R.layout.menu_adaptador, LstObj ) );
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
@@ -80,6 +80,12 @@ public class MainActivity extends Activity {
         switch (position) {
         case 0:
         	frag = new Conceptos(this);
+            break;
+        case 4:
+        	frag = new Herramientas(this);
+            break;
+        case 6:
+        	frag = new Contacto(this);
             break;
         default:
         	Toast.makeText(getApplicationContext(),"no disponible! "+position, Toast.LENGTH_LONG).show();
