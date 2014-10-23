@@ -37,27 +37,6 @@ public class Herramientas extends Fragment{
     public void onActivityCreated(Bundle savedInstanceState) {  
         super.onActivityCreated(savedInstanceState);
         
-        TabHost tabHost = (TabHost)getActivity().findViewById(android.R.id.tabhost);
-        TabSpec tab1 = tabHost.newTabSpec("First Tab");
-        TabSpec tab2 = tabHost.newTabSpec("Second Tab");
-        TabSpec tab3 = tabHost.newTabSpec("Third Tab");
-        Intent temp=new Intent(cont, TabContenido.class);
-        temp.putExtra("Contenido","bla1" );
-        
-        tab1.setIndicator("Tab1");
-        tab1.setContent(temp);
-
-        tab2.setIndicator("Tab2");
-        tab2.setContent(temp);
-
-        tab3.setIndicator("Tab3");
-        tab3.setContent(temp);
-        if(tab1!=null){
-        	tabHost.addTab(tab1);
-            tabHost.addTab(tab2);
-            tabHost.addTab(tab3);
-        }
-        
         /*
         Titulos = getActivity().getResources().getStringArray(R.array.glosariotitulos);
         Definiciones = getActivity().getResources().getStringArray(R.array.glosariodefiniciones);
