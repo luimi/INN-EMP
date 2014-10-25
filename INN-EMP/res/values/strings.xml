@@ -22,9 +22,18 @@
         <item>Innovacion</item>
         <item>Transformacion</item>
     </string-array>
+    <string name="Prototipaje">
+Miércoles, 19 de Marzo de 2014 15:03
+
+La Coordinación de Fomento Empresarial de la Vicerrectoría de Extensión del Politécnico Colombiano Jaime Isaza Cadavid y el Programa Apps.co, invitan al Taller de Ideación, Prototipaje y Validación para Emprendedores, que se realizará con el objetivo de promover entre los estudiantes, docentes y graduados de la Institución, la inscripción a la VI iteración de la  convocatoria 649.
+
+El objetivo de la VI iteración de la  convocatoria 649, es seleccionar propuestas de emprendimiento de la industria TIC que requieran del acompañamiento y entrenamiento en su etapa de “ideación, prototipaje y validación” en el marco del programa emprendimiento del Ministerio de TIC, APPS.CO. Esta invitaci´n está orientada a quienes tengan una propuesta que solucione un problemática social, y que involucre la construcción de una aplicación web/móvil, un contenido digital o un sistema de información.
+
+El taller de ideación, prototipaje y Validación, se realizará en el Auditorio 701 del Centro de Formación Tecnológica, Innovación y Emprendimiento (Bloque P40)  entre las 8:00 a.m. y las 12:00 m. del jueves 20 de marzo de 2014.</string>
     <color name="Turquesa">#00CCCC</color>
     <color name="Azul">#25AEC5</color>
     <color name="Naranja">#ffb300</color>
+    <color name="NaranjaRojizoClaro">#ed6b06</color>
     <color name="NaranjaRojizo">#EA562F</color>
     <color name="Mostaza">#FFCC33</color>
     <color name="BeigeOscuro">#C4B7A1</color>

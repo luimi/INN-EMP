@@ -10,17 +10,19 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.webkit.WebView.FindListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 
-public class Herramientas extends Fragment{
+public class Herramientas extends Fragment implements OnClickListener {
 	private ListView lv;
 	private Context cont;
 	private String[] Titulos,Definiciones;
@@ -36,27 +38,54 @@ public class Herramientas extends Fragment{
     @Override 
     public void onActivityCreated(Bundle savedInstanceState) {  
         super.onActivityCreated(savedInstanceState);
-        
-        /*
-        Titulos = getActivity().getResources().getStringArray(R.array.glosariotitulos);
-        Definiciones = getActivity().getResources().getStringArray(R.array.glosariodefiniciones);
-        ListView lst = (ListView) getActivity().findViewById(R.id.ListaGlosario);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-                R.layout.simple_list_item_1, Titulos);
-        lst.setAdapter(adapter);
-        lst.setOnItemClickListener(new OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view,int position, long id) { 
-              CargarGlosario(position);
-            }});
-        CargarGlosario(0);
-        ((TextView) getActivity().findViewById(R.id.TituloGlosario)).setTypeface(Letra());
-        ((TextView) getActivity().findViewById(R.id.ContenidoGlosario)).setTypeface(Letra());
-        ((TextView) getActivity().findViewById(R.id.TextoGlosario)).setTypeface(Letra());
-        */
-        
+        CambiarTexto((TextView) getActivity().findViewById(R.id.ContenidoHerramientas), getActivity().getString(R.string.Prototipaje));
+        Button b1=(Button) getActivity().findViewById(R.id.PrototipajeHerramientas);
+        Button b2=(Button) getActivity().findViewById(R.id.ResumenHerramientas);
+        Button b3=(Button) getActivity().findViewById(R.id.ElevadorHerramientas);
+        b1.setOnClickListener(this);
+        b2.setOnClickListener(this);
+        b3.setOnClickListener(this);
     }
 	private Typeface Letra(){
 		return Typeface.createFromAsset(getActivity().getAssets(), "Roboto-Regular.ttf");
 	}
-	
+	public void prototipaje(View v){
+		CambiarColor((Button) getActivity().findViewById(R.id.PrototipajeHerramientas),R.color.NaranjaRojizo);
+		CambiarColor((Button) getActivity().findViewById(R.id.ResumenHerramientas),R.color.Gris);
+		CambiarColor((Button) getActivity().findViewById(R.id.ElevadorHerramientas),R.color.Gris);
+		CambiarTexto((TextView) getActivity().findViewById(R.id.ContenidoHerramientas), getActivity().getString(R.string.Prototipaje));
+	}
+	public void resumen(View v){
+		CambiarColor((Button) getActivity().findViewById(R.id.PrototipajeHerramientas),R.color.Gris);
+		CambiarColor((Button) getActivity().findViewById(R.id.ResumenHerramientas),R.color.NaranjaRojizo);
+		CambiarColor((Button) getActivity().findViewById(R.id.ElevadorHerramientas),R.color.Gris);
+		CambiarTexto((TextView) getActivity().findViewById(R.id.ContenidoHerramientas), getActivity().getString(R.string.Prototipaje));
+	}
+	public void elevador(View v){
+		CambiarColor((Button) getActivity().findViewById(R.id.PrototipajeHerramientas),R.color.Gris);
+		CambiarColor((Button) getActivity().findViewById(R.id.ResumenHerramientas),R.color.Gris);
+		CambiarColor((Button) getActivity().findViewById(R.id.ElevadorHerramientas),R.color.NaranjaRojizo);
+		CambiarTexto((TextView) getActivity().findViewById(R.id.ContenidoHerramientas), getActivity().getString(R.string.Prototipaje));
+	}
+	private void CambiarColor(Button b,int color){
+		b.setBackgroundResource(color);
+	}
+	private void CambiarTexto(TextView tv,String Texto){
+		tv.setText(Texto);
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+        case R.id.PrototipajeHerramientas:
+        	prototipaje(v);
+            break;
+        case R.id.ResumenHerramientas:
+        	resumen(v);
+            break;
+        case R.id.ElevadorHerramientas:
+        	elevador(v);
+            break;
+        }
+	}
 }

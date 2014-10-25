@@ -57,7 +57,8 @@ public class MainActivity extends Activity {
             public void onDrawerOpened(View drawerView) {invalidateOptionsMenu();}
         };
         mDrawerLayout.setDrawerListener(mDrawerToggle);
-		
+        CargarFragment(new Noticias(this));
+		//new AsyncConector().execute();
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -81,6 +82,9 @@ public class MainActivity extends Activity {
         case 0:
         	frag = new Conceptos(this);
             break;
+        case 2:
+        	frag = new Tips(this);
+            break;
         case 4:
         	frag = new Herramientas(this);
             break;
@@ -96,7 +100,6 @@ public class MainActivity extends Activity {
             mDrawerList.setItemChecked(position, true);
             mDrawerList.setSelection(position);
             mDrawerLayout.closeDrawer(mDrawerList);
-            
         }
     }
     @Override
@@ -108,4 +111,11 @@ public class MainActivity extends Activity {
 		searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
 		return super.onCreateOptionsMenu(menu);
 	}
+    public void CargarFragment(Fragment frag){
+    	if (frag != null) {
+            FragmentManager fragmentManager = getFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, frag).commit();
+            
+        }
+    }
 }

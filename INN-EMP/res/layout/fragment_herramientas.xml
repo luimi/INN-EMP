@@ -39,47 +39,64 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/PrototipajeHerramientas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/NaranjaRojizo"
+            android:onClick="prototipaje"
             android:text="Prototipaje"
             android:textColor="@color/Blanco"
-            android:textSize="10sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/ResumenHerramientas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/Gris"
+            android:onClick="resumen"
             android:text="Resumen Ejecutivo"
             android:textColor="@color/Blanco"
-            android:textSize="10sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/ElevadorHerramientas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@color/Gris"
+            android:onClick="elevador"
             android:text="Elevador Pitch"
             android:textColor="@color/Blanco"
-            android:textSize="10sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView1"
+    <ScrollView
+        android:id="@+id/scrollView1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:text="TextView" />
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/ContenidoHerramientas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="TextView" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
