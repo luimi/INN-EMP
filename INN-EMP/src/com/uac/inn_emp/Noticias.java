@@ -1,9 +1,5 @@
 package com.uac.inn_emp;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
 import android.app.Fragment;
 import android.content.Context;
 import android.graphics.Typeface;
@@ -11,13 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.View.OnClickListener;
-import android.webkit.WebView.FindListener;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 public class Noticias extends Fragment{
 	private ListView lv;
@@ -30,7 +20,7 @@ public class Noticias extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     	View rootView = inflater.inflate(R.layout.fragment_noticias, container, false);
     	lv=(ListView) rootView.findViewById(R.id.ListaNoticias);
-    	new AsyncConector(cont, lv,this).execute();
+    	new AsyncConector(cont, lv).execute();
         return rootView;
     }
     @Override 

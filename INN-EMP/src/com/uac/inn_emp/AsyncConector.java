@@ -19,16 +19,12 @@ public class AsyncConector extends AsyncTask<Void, Void, Void> {
 	private String url="http://www.uac.edu.co/noticias-generales.html/?format=feed";
 	Context con;
 	ListView lv;
-	private String[] from={"titulo"};
-	private int[] to={R.id.Titulo_AdaptadorNoticia};
-	Fragment fr;
 	ProgressDialog pd;
-	private ArrayList<HashMap<String, String>> Datos=new ArrayList<HashMap<String,String>>();
 	boolean sw=true;
-	public AsyncConector(Context con,ListView lv,Fragment fr) {
+	ArrayAdapter_Noticias arad;
+	public AsyncConector(Context con,ListView lv) {
 		this.con=con;
 		this.lv=lv;
-		this.fr=fr;
 		pd=new ProgressDialog(con);
 		pd.setIndeterminate(true);
 		pd.setMessage("Porfavor Espere");
@@ -39,12 +35,7 @@ public class AsyncConector extends AsyncTask<Void, Void, Void> {
 		ConectorHttpXML conector = new ConectorHttpXML(url);
 		try {
 			noticias = conector.execute();
-			for (int i = 0; i < noticias.size(); i++) {
-				Datos.add(noticias.get(i).Mapa());
-			}
-			SimpleAdapter sa=new SimpleAdapter(con, Datos, R.layout.adapter_noticias,from , to);
-			sa.notifyDataSetChanged();
-			lv.setAdapter(sa);
+			arad=new ArrayAdapter_Noticias(con, noticias);
 		} catch (Exception e) {
 			sw=false;
 			Log.e("Tab", e.getMessage());
@@ -55,6 +46,7 @@ public class AsyncConector extends AsyncTask<Void, Void, Void> {
 
 	@Override
 	protected void onPostExecute(Void result) {
+		super.onPostExecute(result);
 		if(!sw){
 			try{
 				pd.dismiss();
@@ -62,18 +54,10 @@ public class AsyncConector extends AsyncTask<Void, Void, Void> {
 			Toast.makeText(con, "Error en la conexion", Toast.LENGTH_LONG).show();
 		}else{
 			try{
+				lv.setAdapter(arad);
 				pd.dismiss();
 			}catch(Exception e){}
 		}
-		/*
-		// Añadimos todas las publicaciones al Adapter.
-		for (Publicacion tmp : publicaciones)
-			adapter.add(tmp);
-
-		// Indicamos al Adapter que ha cambiado su contenido, para que actualice
-		// a su vez los datos mostrados en el ListView.
-		adapter.notifyDataSetChanged();
-		super.onPostExecute(result);*/
 	}
 
 }

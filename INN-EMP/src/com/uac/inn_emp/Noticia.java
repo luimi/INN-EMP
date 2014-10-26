@@ -17,7 +17,7 @@ public class Noticia {
 		this.categoria = categoria;
 		this.fecha = fecha;
 		this.link = link;
-		this.img = img;
+		this.img = img.replace("img src","img style =\"width:100%;\" src");
 	}
 	public HashMap<String, String> Mapa(){
 		HashMap<String, String> t=new HashMap<String, String>();
