@@ -2,25 +2,44 @@
 
     <string name="app_name">Do it!</string>
     <string-array name="glosariotitulos">
-        <item>Emprender</item>
-        <item>Tipos</item>
-        <item>Emprendimiento</item>
-        <item>Tipos emprendimiento</item>
-        <item>Creatividad</item>
-        <item>Innovacion</item>
-        <item>Transformacion</item>
+        <item>Ecosistema de Negocios</item>
+        <item>Networking</item>
+        <item>Startup</item>
+        <item>Startup Zone</item>
+        <item>Coworking</item>
+        <item>Fundraising</item>
+        <item>Crowdfunding</item>
+        <item>International Cooperation</item>
+        <item>Step-ups</item>
+        <item>Elevator Pith </item>
+        <item>Hitos</item>
+        <item>Timing</item>
+        <item>Hub Coworking</item>
+        <item>Brainstorming</item>
+        <item>Landing Page</item>
+        <item>Red de inversionistas</item>
+        <item>Capital Semilla</item>
     </string-array>
     <string-array name="glosariodefiniciones">
-        <item>Emprendedor es un término derivado de la palabra francesa entrepreneur,
-             y que es comúnmente usado para describir a un individuo que organiza y 
-             opera una o varias empresas, asumiendo cierto riesgo financiero en el
-              emprendimiento.</item>
-        <item>Tipos</item>
-        <item>Emprendimiento</item>
-        <item>Tipos emprendimiento</item>
-        <item>Creatividad</item>
-        <item>Innovacion</item>
-        <item>Transformacion</item>
+        <item>Es una comunidad de negocios soportada por una base de organizaciones e individuos interactuantes que producen bienes y servicios de valor para clientes que son a su vez parte del mismo ecosistema. Las partes del ecosistema incluyen proveedores, productores líderes, competidores entre otros.</item>
+        <item>Es la práctica de acceder a terceras personas (no pertenecientes a los círculos o de amistades más cercanas) con el fin de iniciar algún tipo de relación de negocios o de intercambio de conocimiento. La práctica continua de networking conlleva a la creación de redes de contactos, es decir de grupos de personas que sin tener relaciones de amistad profunda son contables para realizar negocios.</item>
+        <item>Una compañía startup, compañía de arranque, compañía incipiente, compañía de reciente creación, de entre 1 y 12 meses de existencia o, simplemente, start-up es un término utilizado actualmente en el mundo empresarial el cual busca arrancar, emprender o montar un nuevo negocio y hace referencia a ideas de negocios que están empezando o están en construcción, es decir son empresas emergentes apoyadas en la tecnología</item>
+        <item>Son espacios físicos acondicionados con toda la tecnología necesaria destinados a darle vida a nuevos proyectos que se relacionen con  la creatividad e innovación empresarial, que trabajen los emprendedores pertenecientes a la zona,  estos lugares son ubicados especialmente en el eje central de las ciudades o en infraestructuras relacionadas con el desarrollo cultural y socioeconómico de ciudades cabeceras</item>
+        <item>Es una forma de trabajo que permite a profesionales independientes emprendedores y pymes de diferentes sectores compartir un mismo espacio de trabajo, tanto físico como virtual para desarrollar sus proyectos profesionales de manera independiente, a la vez que fomentan proyectos conjuntos. </item>
+        <item>Expresión americana que proviene de los términos Fund (fon-dos/recursos) y raising (del verbo to raise, captar/recaudar/procurar/conse-guir/obtener) se presenta   como una acción directa de captar fondos para organizaciones no gubernamentales, estos fondos se utilizan para desarrollar proyectos comunitarios que resuelvan problemas sociales. </item>
+        <item>Cooperación colectiva, llevada a cabo por personas que realizan una red para conseguir dinero u otros recursos, se suele utilizar Internet para financiar esfuerzos e iniciativas de otras personas u organizaciones</item>
+    	<item>Son  donaciones mediante organismos estatales de países donantes, que actúan de múltiples formas, si bien en la mayoría de los casos lo hacen a través de agencias bilaterales como la Agencia de Cooperación ,las iglesias, católicas y protestantes, como diverso tipo de organizaciones no gubernamentales (ONGs), fundaciones y empresas, que realizan cooperación actuando con sus propios fondos así como administrando financiamiento bilateral y multilateral. </item>
+    	<item>(Un paso adelante) Son programas o eventos informáticos promovidos por empresas como Google que despiertan en los jóvenes el espíritu empresarial, mediante prácticas donde utilizan todas las herramientas informáticas  que ellos tienen, y que sirven para solucionar problemas que se presentan en la sociedad, o en determinadas empresas referente a campos como la educación, la política y las infraestructuras. </item>
+    	<item>Un evento significativo que ocurre durante el proyecto, que generalmente coincide con la terminación de un entregable principal del proyecto.
+				En general, los hitos se utilizan para resaltar momentos importantes del proyecto, y de esta manera, ayuda a mejorar el control del proyecto. Cualquier proyecto, no importa el tamaño que sea, debe ser dividido en pequeñas partes o sub-tareas.</item>
+    	<item>El "Elevator Pitch" o "Elevator Speech" es una técnica de discurso que resume la idea de negocio que conlleva al desarrollo de un producto, servicio o proyecto. Se llama así porque la idea es lograr entregar la información suficiente de un negocio en el tiempo en que dura subir un ascensor al último piso. Claro, no estamos hablando de un edificio de 10 pisos, obvio, es una comparación.</item>
+    	<item>El tiempo o como está de moda ahora: el “timing”. En nuestro plan de negocios debe haber una línea marcando el tiempo que usaremos para cada proceso. Debemos contemplar desde el tiempo que usaremos para la gestación del servicio, tener en cuenta el tiempo que necesitaremos en la espera de terceros y hasta de las financiaciones si así necesitamos. Dentro de los tiempos a respetar y mostrar deberemos tener en cuenta las patentes si tenemos un nuevo invento ya que es algo peliagudo y tardío. </item>
+    	<item>Es un espacio destinado o creado para emprendedores para el fomento del Emprendimiento, pero no un espacio cualquiera, no un emprendimiento cualquiera</item>
+    	<item>Una de las técnicas más usadas en el Emprendimiento y base para la formulación de proyectos, se traduce como la TORMENTE DE IDEAS.
+				Por medio de este método el cual desarrolla el pensamiento creativo y colectivo, porque en al proceso de encontrar soluciones a los problemas deben participar todos los actores, tanto directos como indirectos. Como condición en la participación es que se hacen los aportes sin prejuicio, sin temores y no existe las críticas, se respetan los puntos de vista bajo otras perspectivas. </item>
+    	<item>página de aterrizaje o landing page (en inglés), es aquella página a la que un usuario llega luego de haber hecho clic en un enlace, un banner, un anuncio de texto, incluso en los propios resultados de búsqueda de cualquier buscador como lo son Google, Yahoo o Bing.</item>
+    	<item>Un colectivo de individuos con recursos y de probada experiencia empresarial que colaboran, como grupo, en la selección, inversión, involucramiento y apoyo de emprendimientos dinámicos en alianza con el emprendedor.</item>
+    	<item>Es el recurso representado en dinero u apoyo estratégico que contrarresta las debilidades de los emprendimientos al ser también un capital Inteligente, es decir, aportar no únicamente financiación sino también gran experiencia en áreas tales como estrategia, administración o comercial.</item>
     </string-array>
     <string-array name="ConvPub">
     <item>pub1,PROMOTORA DE PROYECTOS,http://http://www.promotora.com.co</item>

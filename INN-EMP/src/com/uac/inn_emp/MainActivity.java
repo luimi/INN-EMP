@@ -41,14 +41,15 @@ public class MainActivity extends Activity {
         
         List<MenuPrincipal> LstObj= new ArrayList<MenuPrincipal>();
         LstObj.add(new MenuPrincipal("NOTICIAS","busqueda"));
-        LstObj.add(new MenuPrincipal("GLOSARIO","glosario"));
+        LstObj.add(new MenuPrincipal("GLOSARIO","glosariom"));
 		LstObj.add(new MenuPrincipal("CONVOCATORIAS","convocatorias"));
 		LstObj.add(new MenuPrincipal("TIPS","tips"));
 		LstObj.add(new MenuPrincipal("EMPRENDEDOR","emprendedor"));
 		LstObj.add(new MenuPrincipal("HERRAMIENTAS","herramientas"));
-		LstObj.add(new MenuPrincipal("DOCUMENTOS","documentos"));
+		//LstObj.add(new MenuPrincipal("DOCUMENTOS","documentos"));
 		LstObj.add(new MenuPrincipal("CONTACTO","contacto"));
 		LstObj.add(new MenuPrincipal("CANALES","negocio"));
+		LstObj.add(new MenuPrincipal("","uac"));
 		
 		mDrawerList.setAdapter( new MenuAdaptador(this, R.layout.menu_adaptador, LstObj ) );
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
@@ -99,14 +100,14 @@ public class MainActivity extends Activity {
         case 5:
         	frag = new Herramientas(this);
             break;
-        case 7:
+        case 6:
         	frag = new Contacto(this);
             break;
-        case 8:
+        case 7:
         	frag = new Canales(this);
             break;
         default:
-        	Toast.makeText(getApplicationContext(),"no disponible! "+position, Toast.LENGTH_LONG).show();
+        	//Toast.makeText(getApplicationContext(),"no disponible! "+position, Toast.LENGTH_LONG).show();
         }
         if (frag != null) {
             FragmentManager fragmentManager = getFragmentManager();
@@ -118,11 +119,11 @@ public class MainActivity extends Activity {
     }
     @Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater inflater = getMenuInflater();
+    	/*MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.activity_main_actions, menu);
 		SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
 		SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
-		searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+		searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));*/
 		return super.onCreateOptionsMenu(menu);
 	}
     public void CargarFragment(Fragment frag){
