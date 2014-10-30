@@ -12,7 +12,7 @@
         android:background="@color/Naranja" >
 
         <ImageView
-            android:id="@+id/imageView1"
+            android:id="@+id/LogoNoticias"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginBottom="5dp"
@@ -22,7 +22,7 @@
             android:src="@drawable/busqueda" />
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/TituloNoticias"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"

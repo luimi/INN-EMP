@@ -38,8 +38,6 @@ public class AsyncConector extends AsyncTask<Void, Void, Void> {
 			arad=new ArrayAdapter_Noticias(con, noticias);
 		} catch (Exception e) {
 			sw=false;
-			Log.e("Tab", e.getMessage());
-			e.printStackTrace();
 		}
 		return null;
 	}

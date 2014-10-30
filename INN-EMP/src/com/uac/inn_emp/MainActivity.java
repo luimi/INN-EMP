@@ -40,6 +40,7 @@ public class MainActivity extends Activity {
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
         
         List<MenuPrincipal> LstObj= new ArrayList<MenuPrincipal>();
+        LstObj.add(new MenuPrincipal("NOTICIAS","busqueda"));
         LstObj.add(new MenuPrincipal("GLOSARIO","glosario"));
 		LstObj.add(new MenuPrincipal("CONVOCATORIAS","convocatorias"));
 		LstObj.add(new MenuPrincipal("TIPS","tips"));
@@ -47,6 +48,7 @@ public class MainActivity extends Activity {
 		LstObj.add(new MenuPrincipal("HERRAMIENTAS","herramientas"));
 		LstObj.add(new MenuPrincipal("DOCUMENTOS","documentos"));
 		LstObj.add(new MenuPrincipal("CONTACTO","contacto"));
+		LstObj.add(new MenuPrincipal("CANALES","negocio"));
 		
 		mDrawerList.setAdapter( new MenuAdaptador(this, R.layout.menu_adaptador, LstObj ) );
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
@@ -80,16 +82,28 @@ public class MainActivity extends Activity {
     	Fragment frag = null;
         switch (position) {
         case 0:
+        	frag = new Noticias(this);
+            break;
+        case 1:
         	frag = new Conceptos(this);
             break;
         case 2:
+        	frag = new Convocatorias(this);
+            break;
+        case 3:
         	frag = new Tips(this);
             break;
         case 4:
+        	frag = new Emprendedor(this);
+            break;
+        case 5:
         	frag = new Herramientas(this);
             break;
-        case 6:
+        case 7:
         	frag = new Contacto(this);
+            break;
+        case 8:
+        	frag = new Canales(this);
             break;
         default:
         	Toast.makeText(getApplicationContext(),"no disponible! "+position, Toast.LENGTH_LONG).show();

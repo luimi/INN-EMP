@@ -84,8 +84,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:background="@color/Blanco"
-                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:background="@color/Transparente"
+                android:scaleType="fitCenter"
                 android:src="@drawable/twetter" />
 
         </TableRow>
@@ -119,8 +120,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:background="@color/Blanco"
-                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:background="@color/Transparente"
+                android:scaleType="fitCenter"
                 android:src="@drawable/instagram" />
             
         </TableRow>
@@ -154,8 +156,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:background="@color/Blanco"
-                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:background="@color/Transparente"
+                android:scaleType="fitCenter"
                 android:src="@drawable/facebook" />
             
         </TableRow>

@@ -7,6 +7,7 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
@@ -38,7 +40,7 @@ public class Herramientas extends Fragment implements OnClickListener {
     @Override 
     public void onActivityCreated(Bundle savedInstanceState) {  
         super.onActivityCreated(savedInstanceState);
-        CambiarTexto((TextView) getActivity().findViewById(R.id.ContenidoHerramientas), getActivity().getString(R.string.Prototipaje));
+        
         Button b1=(Button) getActivity().findViewById(R.id.PrototipajeHerramientas);
         Button b2=(Button) getActivity().findViewById(R.id.ResumenHerramientas);
         Button b3=(Button) getActivity().findViewById(R.id.ElevadorHerramientas);
@@ -53,19 +55,22 @@ public class Herramientas extends Fragment implements OnClickListener {
 		CambiarColor((Button) getActivity().findViewById(R.id.PrototipajeHerramientas),R.color.NaranjaRojizo);
 		CambiarColor((Button) getActivity().findViewById(R.id.ResumenHerramientas),R.color.Gris);
 		CambiarColor((Button) getActivity().findViewById(R.id.ElevadorHerramientas),R.color.Gris);
-		CambiarTexto((TextView) getActivity().findViewById(R.id.ContenidoHerramientas), getActivity().getString(R.string.Prototipaje));
+		CambiarImagen("herramientas1", (ImageView) getActivity().findViewById(R.id.HerramientasImg1));
+		CambiarImagen("herramientas2", (ImageView) getActivity().findViewById(R.id.HerramientasImg2));
 	}
 	public void resumen(View v){
 		CambiarColor((Button) getActivity().findViewById(R.id.PrototipajeHerramientas),R.color.Gris);
 		CambiarColor((Button) getActivity().findViewById(R.id.ResumenHerramientas),R.color.NaranjaRojizo);
 		CambiarColor((Button) getActivity().findViewById(R.id.ElevadorHerramientas),R.color.Gris);
-		CambiarTexto((TextView) getActivity().findViewById(R.id.ContenidoHerramientas), getActivity().getString(R.string.Prototipaje));
+		CambiarImagen("herramientas3", (ImageView) getActivity().findViewById(R.id.HerramientasImg1));
+		CambiarImagen("herramientas4", (ImageView) getActivity().findViewById(R.id.HerramientasImg2));
 	}
 	public void elevador(View v){
 		CambiarColor((Button) getActivity().findViewById(R.id.PrototipajeHerramientas),R.color.Gris);
 		CambiarColor((Button) getActivity().findViewById(R.id.ResumenHerramientas),R.color.Gris);
 		CambiarColor((Button) getActivity().findViewById(R.id.ElevadorHerramientas),R.color.NaranjaRojizo);
-		CambiarTexto((TextView) getActivity().findViewById(R.id.ContenidoHerramientas), getActivity().getString(R.string.Prototipaje));
+		CambiarImagen("herramientas5", (ImageView) getActivity().findViewById(R.id.HerramientasImg1));
+		CambiarImagen("herramientas6", (ImageView) getActivity().findViewById(R.id.HerramientasImg2));
 	}
 	private void CambiarColor(Button b,int color){
 		b.setBackgroundResource(color);
@@ -73,7 +78,12 @@ public class Herramientas extends Fragment implements OnClickListener {
 	private void CambiarTexto(TextView tv,String Texto){
 		tv.setText(Texto);
 	}
-
+	private void CambiarImagen(String nom,ImageView img){
+		String uri = "drawable/" + nom;
+		int imageResource = getActivity().getResources().getIdentifier(uri, null,getActivity().getPackageName());
+		Drawable image = getActivity().getResources().getDrawable(imageResource);
+		img.setImageDrawable(image);
+	}
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {

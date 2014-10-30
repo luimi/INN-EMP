@@ -22,14 +22,37 @@
         <item>Innovacion</item>
         <item>Transformacion</item>
     </string-array>
-    <string name="Prototipaje">
-Miércoles, 19 de Marzo de 2014 15:03
-
-La Coordinación de Fomento Empresarial de la Vicerrectoría de Extensión del Politécnico Colombiano Jaime Isaza Cadavid y el Programa Apps.co, invitan al Taller de Ideación, Prototipaje y Validación para Emprendedores, que se realizará con el objetivo de promover entre los estudiantes, docentes y graduados de la Institución, la inscripción a la VI iteración de la  convocatoria 649.
-
-El objetivo de la VI iteración de la  convocatoria 649, es seleccionar propuestas de emprendimiento de la industria TIC que requieran del acompañamiento y entrenamiento en su etapa de “ideación, prototipaje y validación” en el marco del programa emprendimiento del Ministerio de TIC, APPS.CO. Esta invitaci´n está orientada a quienes tengan una propuesta que solucione un problemática social, y que involucre la construcción de una aplicación web/móvil, un contenido digital o un sistema de información.
-
-El taller de ideación, prototipaje y Validación, se realizará en el Auditorio 701 del Centro de Formación Tecnológica, Innovación y Emprendimiento (Bloque P40)  entre las 8:00 a.m. y las 12:00 m. del jueves 20 de marzo de 2014.</string>
+    <string-array name="ConvPub">
+    <item>pub1,PROMOTORA DE PROYECTOS,http://http://www.promotora.com.co</item>
+	<item>pub2,FONDO DE INVERSIÓN FORESTAL COLOMBIA,http://www.laefm.com</item>
+	<item>pub3,FONDO TRANSANDINO COLOMBIA FCP,http://www.seafcolombia.com</item>
+	<item>pub4,FCP VALORAR FUTURO,http://www.valorarfuturo.com</item>
+	<item>pub5,FONDO DE INFRAESTRUCTURA COLOMBIA ASMORE,http://www.ashmoregroup.com</item>
+    </string-array>
+    <string-array name="ConvPriNac">
+	<item>prinac1,SECRETARÍA DE DESARROLLO DISTRITAL,http://www.desarrolloeconomico.gov.co</item>
+	<item>prinac2,APPS,http://www.apps.co/inscripciones/convocatorias/</item>
+	<item>prinac3,BBVA OPEN TALEN,http://www.centrodeinnovacionbbva.com/opentalent</item>
+	<item>prinac4,COLCIENCIAS,http://www.colciencias.gov.co</item>
+	<item>prinac5,FONDO EMPRENDER,http://www.fondoemprender.com</item>
+	<item>prinac6,INNOVA APPS,http://www.bbvaopen4u.com/innovaapps/es</item>
+	<item>prinac7,INNPULSA,http://www.innpulsacolombia.com</item>
+	<item>prinac8,WAYRA,http://www.wayra.org/joinus-es</item>
+	<item>prinac9,TIPS AMÉRICAS,http://www.ticamericas.net</item>
+	<item>prinac10,CONCURSO NACIONAL DE EMPRENDEDORES VENTURES,http://www.ventures.com.co/index.php/concurso.html</item>
+    </string-array>
+    <string-array name="ConvPriInt">
+	<item>priint1,ADVENT INTERNACIONAL CORPORATION,http://www.adventinternacional.com</item>
+	<item>priint2,AXON CAPITAL,http://www.axon-capital.com</item>
+	<item>priint3,DYNAMO CAPITAL S.A,http://www.dynamocapital.com</item>
+	<item>priint5,LINZOR CAPITAL PARTNERS,http://www.linzorcapital.com</item>
+	<item>priint6,MAS EQUITY PARTNERS,http://www.rohatyngroup.com</item>
+	<item>priint7,SOUTHERN CROSS GROUP,http://www.southerncrossgroup.com</item>
+	<item>priint9,THE ROHATYN GROUP,http://www.rohatyngroup.com</item>
+	<item>priint8,TRIBECA,http://www.tribeca.com.co</item>
+	<item>priint10,VICTORIA CAPITAL PARTNERS,http://www.victoriacp.com</item>
+	<item>priint4,KANDEO INVESTMENT ADVISORS,http://www.kandeofund.com</item>
+    </string-array>
     <color name="Turquesa">#00CCCC</color>
     <color name="Azul">#25AEC5</color>
     <color name="Naranja">#ffb300</color>
@@ -39,6 +62,7 @@ El taller de ideación, prototipaje y Validación, se realizará en el Auditorio
     <color name="BeigeOscuro">#C4B7A1</color>
     <color name="Blanco">#FFFFFF</color>
     <color name="Gris">#b5b5b5</color>
+    <color name="Transparente">#00FFFFFF</color>
     
 	
 	
