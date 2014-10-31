@@ -15,6 +15,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import co.edu.uac.inn_emp.R;
 
 public class Emprendedor extends Fragment{
 	private Context cont;

@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.Window;
+import co.edu.uac.inn_emp.R;
  
 public class ss extends Activity {
  

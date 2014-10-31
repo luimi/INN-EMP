@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
+import co.edu.uac.inn_emp.R;
  
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
  

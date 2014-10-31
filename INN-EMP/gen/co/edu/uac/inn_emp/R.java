@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.uac.inn_emp;
+package co.edu.uac.inn_emp;
 
 public final class R {
     public static final class array {

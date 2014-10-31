@@ -11,6 +11,7 @@ import android.webkit.WebView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import co.edu.uac.inn_emp.R;
 
 public class ArrayAdapter_Convocatorias extends ArrayAdapter<Convocatoria>{
 	Context context;

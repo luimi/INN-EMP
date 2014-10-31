@@ -23,6 +23,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
+import co.edu.uac.inn_emp.R;
 
 public class MainActivity extends Activity {
     private DrawerLayout mDrawerLayout;

@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import co.edu.uac.inn_emp.R;
 
 public class ArrayAdapter_Noticias extends ArrayAdapter<Noticia>{
 

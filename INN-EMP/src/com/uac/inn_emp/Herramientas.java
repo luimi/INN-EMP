@@ -23,6 +23,7 @@ import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
+import co.edu.uac.inn_emp.R;
 
 public class Herramientas extends Fragment implements OnClickListener {
 	private ListView lv;

@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import co.edu.uac.inn_emp.R;
 
 
 public class MenuAdaptador extends ArrayAdapter<MenuPrincipal> {

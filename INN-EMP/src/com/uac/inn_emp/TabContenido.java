@@ -4,6 +4,7 @@ package com.uac.inn_emp;
 
 import android.app.Activity;
 import android.os.Bundle;
+import co.edu.uac.inn_emp.R;
 
 public class TabContenido extends Activity {
     @Override
